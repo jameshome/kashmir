@@ -1,0 +1,27 @@
+{
+  "name": "kashmir",
+  "version": "1.0.0",
+  "description": "EXCLUSIVELY DESIGNED FOR KEVIN KELLY ϟ 2022",
+  "author": "James Home",
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "Custom",
+    "Proprietary"
+  ],
+  "homepage": "https://github.com/jameshome/kashmir",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameshome/kashmir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jameshome/kashmir/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "dir-archiver": "^1.1.1"
+  },
+  "scripts": {
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist style.css.map yarn.lock"
+  }
+}

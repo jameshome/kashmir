@@ -1,0 +1,849 @@
+/*
+Theme Name: Kashmir
+Description: EXCLUSIVELY DESIGNED FOR KEVIN KELLY ϟ 2022
+Theme URI: https://github.com/jameshome/kashmir
+Author: James Home
+Author URI: https://jameshome.com/
+Tags: custom
+Version: 0.0.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: Unlicensed
+Text Domain: Kashmir
+*/
+
+/* color */
+:root {
+  --color-black: rgba(0, 0, 0, 1);
+  --color-black-10: rgba(0, 0, 0, 0.1);
+  --color-black-30: rgba(0, 0, 0, 0.3);
+  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-30: rgba(255, 255, 255, 0.3);
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-grey: rgba(34, 34, 34, 1);
+  --color-blue: rgba(88, 112, 135, 1);
+  --color-blue-80: rgba(88, 112, 135, 0.8);
+  --color-snow: rgba(239, 245, 247, 1);
+  --color-lake: rgba(210, 227, 232, 1);
+  --color-straw: rgba(182, 102, 17, 1);
+  --shadow-media: 0 2px 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* responsiveness */
+:root {
+  --reference-width: 800px;
+  --reference-margin: 0.75rem;
+  --responsive-flex: column wrap;
+  --responsive-only-wide: none;
+  --responsive-only-narrow: block;
+  --responsive-illo-margin: 2rem 0 0 0;
+  --responsive-gallery-justify: center;
+  --responsive-gallery-margin: 1rem 0.5rem -3rem;
+  --responsive-gallery-width: 100px;
+  --responsive-gallery-padding: 3rem;
+  --responsive-image-wrap-float: none;
+  --responsive-image-wrap-width: 100%;
+  --responsive-image-wrap-margin: 0;
+}
+@media (min-width: 760px) {
+  :root {
+    --reference-margin: 1rem;
+    --responsive-flex: row nowrap;
+    --responsive-only-wide: block;
+    --responsive-only-narrow: none;
+    --responsive-illo-margin: 4rem 0 0 0;
+    --responsive-gallery-justify: space-between;
+    --responsive-gallery-margin: 0.5rem;
+    --responsive-gallery-width: 120px;
+    --responsive-gallery-padding: 0;
+    --responsive-image-wrap-float: right;
+    --responsive-image-wrap-width: 300px;
+    --responsive-image-wrap-margin: 0 0 2rem 3rem;
+  }
+}
+
+/* typography */
+:root {
+  --font-body: normal 500 1rem/1.6 "Work Sans", sans-serif;
+  --font-action: normal 700 1rem/1.1 "Work Sans", sans-serif;
+  --font-nav: normal 700 0.9rem/1.2 "Work Sans", sans-serif;
+  --font-details: normal 500 0.8rem/1.2 "Work Sans", sans-serif;
+  --font-breadcrumb: normal 700 0.9rem/1.2 "Work Sans", sans-serif;
+  --font-section-head-1: normal 900 2rem/1.2 "Work Sans", sans-serif;
+  --font-section-head-2: normal 900 1.6rem/1.2 "Work Sans", sans-serif;
+  --font-caption: italic 500 0.8rem/1.2 "Work Sans", sans-serif;
+}
+@media (min-width: 760px) {
+  :root {
+    --font-body: normal 500 1.1rem/1.6 "Work Sans", sans-serif;
+    --font-action: normal 700 1.1rem/1.1 "Work Sans", sans-serif;
+  }
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("./fonts/work-sans-v13-latin-500.woff2") format("woff2"),
+    url("./fonts/work-sans-v13-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("./fonts/work-sans-v13-latin-700.woff2") format("woff2"),
+    url("./fonts/work-sans-v13-latin-700.woff") format("woff");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: local(""), url("./fonts/work-sans-v13-latin-900.woff2") format("woff2"),
+    url("./fonts/work-sans-v13-latin-900.woff") format("woff");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: local(""),
+    url("./fonts/work-sans-v13-latin-500italic.woff2") format("woff2"),
+    url("./fonts/work-sans-v13-latin-500italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""),
+    url("./fonts/work-sans-v13-latin-700italic.woff2") format("woff2"),
+    url("./fonts/work-sans-v13-latin-700italic.woff") format("woff");
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  font-feature-settings: "liga" on;
+  scroll-behavior: smooth;
+  font: var(--font-body);
+  letter-spacing: 0;
+  background-color: var(--color-snow);
+  color: var(--color-grey);
+}
+
+a {
+  color: var(--color-straw);
+  text-decoration: none;
+}
+
+a.link-action {
+  display: inline-block;
+  background-color: var(--color-straw);
+  font: var(--font-nav);
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin: 0 8px 0 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font: var(--font-nav);
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  white-space: nowrap;
+}
+
+i {
+  font-style: italic;
+}
+
+em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.inline-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-site {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  font: var(--font-nav);
+  line-height: 24px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+nav a {
+  padding: 6px 8px;
+  height: 24px;
+}
+
+nav a:hover,
+nav button:hover {
+  background-color: var(--color-white-10);
+}
+
+.nav-search {
+  display: none;
+  position: absolute;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-lake);
+  outline: 2px solid var(--color-white);
+  border-radius: 24px;
+  z-index: 1;
+}
+
+.nav-search.visible {
+  display: flex;
+}
+
+.nav-search a {
+  background-color: var(--color-white-50);
+}
+
+.nav-search-button {
+  background-image: url(./img/icon-search-blue.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 0.5rem;
+  box-sizing: content-box;
+}
+
+.nav-search-close {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 42px;
+  background-image: url(./img/icon-close-blue.svg);
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 40px;
+}
+
+footer .nav-search-button {
+  background-image: url(./img/icon-search-white.svg);
+}
+
+.nav-search input[type="text"] {
+  font: var(--font-nav);
+  border: 0;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  width: 80%;
+  background-color: transparent;
+}
+
+.nav-search input[type="image"] {
+  width: 24px;
+  height: 24px;
+  padding: 0.5rem;
+  outline: 0;
+}
+
+.nav-search input[type="image"]:focus {
+  background-color: var(--color-white-50);
+  border-radius: 24px;
+}
+
+.nav-search input[type="text"]::placeholder {
+  color: var(--color-black-30);
+}
+
+.nav-search input[type="text"]:focus {
+  outline: 0;
+}
+
+header .nav-site a,
+header .nav-site button {
+  color: var(--color-blue);
+}
+
+/* 
+header renders the same HTML four different ways, defined in this order:
+1. narrow, content
+2. narrow, home
+3. wide, content
+4. wide, home
+
+the cascade is doing a lot of careful work here
+be mindful when making changes
+*/
+
+/* 1. narrow, content */
+header {
+  position: relative;
+  width: 100%;
+}
+
+header .canvas {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: var(--color-white);
+  background-image: url(./img/photo-kashmirhay.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: var(--color-blue);
+  min-height: 48px;
+}
+
+header .menu-button {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+}
+
+header .chop {
+  position: absolute;
+  top: 4px;
+  left: 0.5rem;
+  right: 0.5rem;
+  min-height: 44px;
+  background-image: url(./img/logo-kk-blue.svg);
+  background-size: 70px;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+header .chop h1 {
+  margin: 0;
+  font: normal 500 1rem/1.6 "Work Sans", sans-serif;
+}
+
+header .chop h1,
+header .tagline,
+header .nav-site {
+  display: none;
+}
+
+header .menu {
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  background-color: var(--color-white-90);
+  padding-bottom: 0.5rem;
+  box-shadow: 0 4px 6px 0 var(--color-black-10);
+}
+
+header .menu .nav-search-button {
+  display: none;
+}
+
+header .menu .nav-search {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  margin: 0;
+  width: 100%;
+}
+
+header .menu .nav-search-input {
+  margin-left: 0.5rem;
+  padding-left: 0;
+}
+
+/* 2. narrow, home */
+.home header {
+  padding-top: 66.67%;
+}
+
+.home header .canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home header .tagline {
+  display: block;
+  font: normal 900 0.7rem/1.2 "Work Sans", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px auto 0;
+  padding: var(--reference-margin) 0.5rem;
+}
+
+@media (min-width: 760px) {
+  /* 3. wide, content */
+  .menu-button {
+    display: none;
+  }
+
+  header .canvas {
+    padding-bottom: 5px;
+  }
+
+  header .chop {
+    position: relative;
+    color: var(--color-blue);
+    top: 0;
+    margin-top: 0.5rem;
+    min-height: 0;
+    padding: 60px 0 0;
+    text-transform: uppercase;
+    background-size: 115px;
+  }
+
+  header .chop h1 {
+    display: block;
+  }
+
+  header .nav-site {
+    display: flex;
+  }
+
+  /* 4. wide, home */
+  .home header .canvas {
+    background-position: center;
+  }
+
+  .home header .chop {
+    font: var(--font-chop);
+    margin: 0 auto;
+    padding: 94px 1rem 1rem;
+    text-transform: uppercase;
+    background-size: 100%;
+  }
+
+  .home header .chop h1 {
+    font-size: 1.4rem;
+  }
+
+  .home header .nav-site {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+  }
+
+  .home header .nav-site a:first-of-type {
+    padding-left: 16px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  .home header .nav-search-button {
+    padding-right: 16px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  .home header .nav-site a:hover,
+  .home header .nav-site button:hover {
+    background-color: var(--color-white-30);
+  }
+
+  .home header .tagline {
+    font: normal 900 0.9rem/1.6 "Work Sans", sans-serif;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: var(--responsive-flex);
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blue);
+}
+
+footer a {
+  color: var(--color-white);
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: var(--responsive-flex);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.footer-social nav:first-of-type a {
+  height: 32px;
+}
+
+footer .chop {
+  padding: 1.25rem var(--reference-margin) 0.75rem;
+}
+
+footer .chop img {
+  width: 100px;
+}
+
+.caption,
+.photo-wide figcaption {
+  padding: var(--reference-margin);
+  padding-left: 8rem;
+  font: var(--font-caption);
+  color: var(--color-black-50);
+  text-align: right;
+  background-color: var(--color-white);
+}
+
+.caption a,
+.photo-wide figcaption a {
+  color: var(--color-black-50);
+  text-decoration: underline;
+}
+
+.caption p,
+.photo-wide figcaption p {
+  margin: 0;
+}
+
+.photo-wide {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.photo-wide .wp-block-image {
+  margin: 0;
+}
+
+.photo-wide img {
+  margin: 0;
+  width: 100%;
+}
+
+.photo-wide figcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--color-white-90);
+  background-color: transparent;
+}
+
+.image-wrap {
+  float: var(--responsive-image-wrap-float);
+  max-width: var(--responsive-image-wrap-width);
+  margin: var(--responsive-image-wrap-margin);
+}
+
+.summary,
+article {
+  padding: 3rem 0 2rem;
+}
+
+.summary {
+  background-image: linear-gradient(
+    180deg,
+    var(--color-white) 0%,
+    transparent 100%
+  );
+}
+
+.article {
+  background-color: var(--color-white);
+}
+
+.layout h2 {
+  font: var(--font-section-head-1);
+  color: var(--color-blue);
+  text-transform: uppercase;
+}
+
+.layout p,
+.layout h2 {
+  margin: 0 auto var(--reference-margin);
+  max-width: var(--reference-width);
+}
+
+.layout-more a,
+.actions a {
+  text-transform: uppercase;
+  font: var(--font-action);
+  margin-right: var(--reference-margin);
+}
+
+.layout-basic,
+.layout-summary,
+.layout-gallery,
+.layout-more {
+  display: flex;
+  flex-flow: var(--responsive-flex);
+  margin: 0 auto;
+  padding: 0 var(--reference-margin);
+  max-width: var(--reference-width);
+}
+
+.layout-basic,
+.layout-more {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.layout-summary-main {
+  flex: 2;
+  margin: 0 3rem 0 0;
+}
+
+.layout-summary-illo {
+  flex: 1;
+  margin: var(--responsive-illo-margin);
+}
+
+.layout-summary-illo img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: var(--shadow-media);
+}
+
+.layout-gallery {
+  margin-top: 2rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.home .layout-gallery {
+  justify-content: var(--responsive-gallery-justify);
+  padding-bottom: var(--responsive-gallery-padding);
+}
+
+.layout-gallery figure {
+  margin: var(--responsive-gallery-margin);
+  width: var(--responsive-gallery-width);
+  box-shadow: var(--shadow-media);
+}
+
+.inline-component {
+  margin: 1rem 0;
+}
+
+.breadcrumb {
+  font: var(--font-breadcrumb);
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin: 0;
+}
+
+.actions .wp-block-group__inner-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.actions .wp-block-group__inner-container p {
+  margin: 0;
+}
+
+.link-popup {
+  display: inline-block;
+  position: relative;
+}
+
+.link-popup-trigger {
+  font: var(--font-details);
+  color: var(--color-straw);
+  cursor: pointer;
+}
+
+.link-popup-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-media);
+  margin: 2rem 0 0 0;
+  padding: 0 1rem;
+}
+
+.link-popup-menu.visible {
+  display: block;
+}
+
+.link-popup-menu a {
+  font: var(--font-nav);
+  text-transform: uppercase;
+  display: block;
+  white-space: nowrap;
+  margin: 1rem 0;
+}
+
+/* Wordpress components */
+
+.comment-content a {
+  word-wrap: break-word;
+}
+
+.bypostauthor {
+  display: block;
+}
+
+.widget {
+  margin: 0 0 1.5em;
+}
+
+.widget select {
+  max-width: 100%;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+  margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+  text-align: center;
+}
+
+.gallery {
+  margin-bottom: 1.5em;
+  display: grid;
+  grid-gap: 1.5em;
+}
+
+.gallery-item {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gallery-columns-6 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.gallery-columns-7 {
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.gallery-columns-8 {
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.gallery-columns-9 {
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.gallery-caption {
+  display: block;
+}

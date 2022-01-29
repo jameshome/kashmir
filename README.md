@@ -1,2 +1,1 @@
-# kashmir
-a Wordpress theme for kk.org
+EXCLUSIVELY DESIGNED FOR KEVIN KELLY ϟ 2022
