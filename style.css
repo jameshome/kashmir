@@ -697,6 +697,7 @@ article {
   margin: var(--responsive-gallery-margin);
   width: var(--responsive-gallery-width);
   box-shadow: var(--shadow-media);
+  line-height: 0;
 }
 
 .inline-component {
