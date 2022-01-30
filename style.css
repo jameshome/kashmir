@@ -652,6 +652,7 @@ article {
 .layout-basic,
 .layout-summary,
 .layout-gallery,
+.wp-block-group.layout-gallery .wp-block-group__inner-container,
 .layout-more {
   display: flex;
   flex-flow: var(--responsive-flex);
@@ -684,8 +685,9 @@ article {
   box-shadow: var(--shadow-media);
 }
 
-.layout-gallery {
-  margin-top: 2rem;
+.layout-gallery,
+.wp-block-group.layout-gallery .wp-block-group__inner-container {
+  margin-top: 1rem;
   flex-flow: row wrap;
   justify-content: center;
   padding-bottom: 3rem;
@@ -701,13 +703,6 @@ article {
   width: var(--responsive-gallery-width);
   box-shadow: var(--shadow-media);
   line-height: 0;
-}
-
-.wp-block-group.layout-gallery .wp-block-group__inner-container {
-  margin-top: 2rem;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding-bottom: 3rem;
 }
 
 .inline-component,
