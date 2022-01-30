@@ -707,8 +707,14 @@ article {
   line-height: 0;
 }
 
-.inline-component {
+.inline-component,
+.inline-actions {
   margin: 1rem 0;
+}
+
+.inline-actions {
+  text-transform: uppercase;
+  font: var(--font-action);
 }
 
 .breadcrumb {
