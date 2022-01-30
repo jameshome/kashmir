@@ -42,6 +42,15 @@ get_header();
   </div>
 </section>
 
+<section class="summary" id="tools">
+  <div class="layout layout-summary">
+    <?php show_post('home/tools'); ?>
+  </div>
+  <div class="layout-gallery">
+    <?php show_post('home/tools-gallery'); ?>
+  </div>
+</section>
+
 <div class="photo-wide">
   <?php show_post('home/outro-photo'); ?>
 </div>
