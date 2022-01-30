@@ -641,6 +641,7 @@ article {
   font: var(--font-section-head-2);
   color: var(--color-grey);
   text-transform: uppercase;
+  margin: 2rem 0 0.5rem;
 }
 
 .layout p,
