@@ -40,6 +40,9 @@ get_header();
   <div class="layout-gallery">
     <?php show_post('home/books-gallery'); ?>
   </div>
+  <div class="layout layout-more">
+    <a href="/books">More books by Kevin</a>
+  </div>
 </section>
 
 <section class="summary" id="tools">
