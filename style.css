@@ -74,7 +74,7 @@ Text Domain: Kashmir
   --font-details: normal 500 0.8rem/1.2 "Work Sans", sans-serif;
   --font-breadcrumb: normal 700 0.9rem/1.2 "Work Sans", sans-serif;
   --font-section-head-1: normal 900 2rem/1.2 "Work Sans", sans-serif;
-  --font-section-head-2: normal 900 1.6rem/1.2 "Work Sans", sans-serif;
+  --font-section-head-2: normal 900 1.4rem/1.2 "Work Sans", sans-serif;
   --font-caption: italic 500 0.8rem/1.2 "Work Sans", sans-serif;
 }
 @media (min-width: 760px) {
@@ -607,6 +607,7 @@ footer .chop img {
   float: var(--responsive-image-wrap-float);
   max-width: var(--responsive-image-wrap-width);
   margin: var(--responsive-image-wrap-margin);
+  box-shadow: var(--shadow-media);
 }
 
 .wp-block-image img {
