@@ -703,6 +703,13 @@ article {
   line-height: 0;
 }
 
+.wp-block-group.layout-gallery .wp-block-group__inner-container {
+  margin-top: 2rem;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
 .inline-component,
 .inline-actions {
   margin: 1rem 0;
