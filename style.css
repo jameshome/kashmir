@@ -258,6 +258,10 @@ nav button:hover {
   z-index: 1;
 }
 
+.menu .nav-search {
+  outline: 0;
+}
+
 .nav-search.visible {
   display: flex;
 }
@@ -288,6 +292,10 @@ nav button:hover {
   background-repeat: no-repeat;
   width: 12px;
   height: 40px;
+}
+
+.menu .nav-search-close {
+  opacity: 0;
 }
 
 footer .nav-search-button {
