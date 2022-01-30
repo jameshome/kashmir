@@ -585,6 +585,7 @@ footer .chop img {
 .photo-wide {
   position: relative;
   width: 100%;
+  height: auto;
   line-height: 0;
 }
 
@@ -595,6 +596,7 @@ footer .chop img {
 .photo-wide img {
   margin: 0;
   width: 100%;
+  height: auto;
 }
 
 .photo-wide figcaption {
@@ -677,6 +679,7 @@ article {
 
 .layout-summary-illo img {
   width: 100%;
+  height: auto;
   border-radius: 4px;
   box-shadow: var(--shadow-media);
 }
