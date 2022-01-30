@@ -19,12 +19,12 @@ function kashmir_setup() {
       'footer'  => __( 'Footer', 'kashmir' ),
 		)
 	);
+  add_theme_support( 'responsive-embeds' );
 	add_theme_support(
 		'html5',
 		array(
 			'search-form',
 			'gallery',
-			'responsive-embeds',
 			'caption',
 			'style',
 			'script',
@@ -32,6 +32,7 @@ function kashmir_setup() {
 	);
 }
 add_action( 'after_setup_theme', 'kashmir_setup' );
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
