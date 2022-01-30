@@ -525,6 +525,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-blue);
+  clear: both;
 }
 
 footer a {
@@ -608,6 +609,7 @@ footer .chop img {
   max-width: var(--responsive-image-wrap-width);
   margin: var(--responsive-image-wrap-margin);
   box-shadow: var(--shadow-media);
+  line-height: 0;
 }
 
 .wp-block-image img {
