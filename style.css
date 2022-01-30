@@ -631,6 +631,7 @@ article {
 
 .article {
   background-color: var(--color-white);
+  min-height: 700px;
 }
 
 .layout h2 {
