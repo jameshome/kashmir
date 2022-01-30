@@ -613,6 +613,10 @@ footer .chop img {
   margin: var(--responsive-image-wrap-margin);
 }
 
+.wp-block-image img {
+  height: auto;
+}
+
 .summary,
 article {
   padding: 3rem 0 2rem;
