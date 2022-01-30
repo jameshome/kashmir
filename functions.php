@@ -24,6 +24,7 @@ function kashmir_setup() {
 		array(
 			'search-form',
 			'gallery',
+			'responsive-embeds',
 			'caption',
 			'style',
 			'script',
