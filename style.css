@@ -636,6 +636,12 @@ article {
   text-transform: uppercase;
 }
 
+.layout h3 {
+  font: var(--font-section-head-2);
+  color: var(--color-grey);
+  text-transform: uppercase;
+}
+
 .layout p,
 .layout h2 {
   margin: 0 auto var(--reference-margin);
