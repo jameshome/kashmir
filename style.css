@@ -170,13 +170,9 @@ button {
   white-space: nowrap;
 }
 
-i {
-  font-style: italic;
-}
-
+i,
 em {
   font-style: italic;
-  font-weight: 700;
 }
 
 strong,
