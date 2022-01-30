@@ -633,7 +633,7 @@ article {
   background-image: linear-gradient(
     180deg,
     var(--color-white) 0%,
-    transparent 100%
+    var(--color-white-10) 100%
   );
 }
 
