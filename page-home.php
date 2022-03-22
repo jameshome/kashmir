@@ -34,9 +34,6 @@ get_header();
   <div class="layout-gallery">
     <?php show_post('home/futurism-gallery'); ?>
   </div>
-  <div class="layout layout-more">
-    <a href="/books/#futurism">More books</a>
-  </div>
 </section>
 
 <section class="summary" id="recomendos">
@@ -46,9 +43,6 @@ get_header();
   <div class="layout-gallery">
     <?php show_post('home/recomendos-gallery'); ?>
   </div>
-  <div class="layout layout-more">
-    <a href="/books#recomendos">More books</a>
-  </div>
 </section>
 
 <section class="summary" id="art">
@@ -57,9 +51,6 @@ get_header();
   </div>
   <div class="layout-gallery">
     <?php show_post('home/art-gallery'); ?>
-  </div>
-  <div class="layout layout-more">
-    <a href="/books#art">More books</a>
   </div>
 </section>
 
