@@ -54,6 +54,12 @@ get_header();
   </div>
 </section>
 
+<section class="summary" id="archives">
+  <div class="layout layout-summary">
+    <?php show_post('home/archives'); ?>
+  </div>
+</section>
+
 <div class="photo-wide">
   <?php show_post('home/outro-photo'); ?>
 </div>
