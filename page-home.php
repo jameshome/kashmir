@@ -39,18 +39,6 @@ get_header();
   </div>
 </section>
 
-<section class="summary" id="art">
-  <div class="layout layout-summary">
-    <?php show_post('home/art'); ?>
-  </div>
-  <div class="layout-gallery">
-    <?php show_post('home/art-gallery'); ?>
-  </div>
-  <div class="layout layout-more">
-    <a href="/books#art">More books</a>
-  </div>
-</section>
-
 <section class="summary" id="recomendos">
   <div class="layout layout-summary">
     <?php show_post('home/recomendos'); ?>
@@ -60,6 +48,18 @@ get_header();
   </div>
   <div class="layout layout-more">
     <a href="/books#recomendos">More books</a>
+  </div>
+</section>
+
+<section class="summary" id="art">
+  <div class="layout layout-summary">
+    <?php show_post('home/art'); ?>
+  </div>
+  <div class="layout-gallery">
+    <?php show_post('home/art-gallery'); ?>
+  </div>
+  <div class="layout layout-more">
+    <a href="/books#art">More books</a>
   </div>
 </section>
 
