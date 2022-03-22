@@ -21,36 +21,45 @@ get_header();
   }
 ?>
 
-<section class="summary now" id="now">
+<section class="summary" id="about">
   <div class="layout layout-summary">
-    <?php show_post('home/now'); ?>
+    <?php show_post('home/about'); ?>
   </div>
 </section>
 
-<section class="summary" id="screens">
+<section class="summary" id="futurism">
   <div class="layout layout-summary">
-    <?php show_post('home/screens'); ?>
-  </div>
-</section>
-
-<section class="summary" id="books">
-  <div class="layout layout-summary">
-    <?php show_post('home/books'); ?>
+    <?php show_post('home/futurism'); ?>
   </div>
   <div class="layout-gallery">
-    <?php show_post('home/books-gallery'); ?>
+    <?php show_post('home/futurism-gallery'); ?>
   </div>
   <div class="layout layout-more">
-    <a href="/books">More books by Kevin</a>
+    <a href="/books/#futurism">More books</a>
   </div>
 </section>
 
-<section class="summary" id="tools">
+<section class="summary" id="art">
   <div class="layout layout-summary">
-    <?php show_post('home/tools'); ?>
+    <?php show_post('home/art'); ?>
   </div>
   <div class="layout-gallery">
-    <?php show_post('home/tools-gallery'); ?>
+    <?php show_post('home/art-gallery'); ?>
+  </div>
+  <div class="layout layout-more">
+    <a href="/books#art">More books</a>
+  </div>
+</section>
+
+<section class="summary" id="recomendos">
+  <div class="layout layout-summary">
+    <?php show_post('home/recomendos'); ?>
+  </div>
+  <div class="layout-gallery">
+    <?php show_post('home/recomendos-gallery'); ?>
+  </div>
+  <div class="layout layout-more">
+    <a href="/books#recomendos">More books</a>
   </div>
 </section>
 
