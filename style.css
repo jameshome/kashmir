@@ -571,12 +571,17 @@ footer .chop img {
   width: 100px;
 }
 
+.layout figcaption,
+.photo-wide figcaption,
+.caption {
+  font: var(--font-caption);
+  color: var(--color-black-50);
+}
+
 .caption,
 .photo-wide figcaption {
   padding: var(--reference-margin);
   padding-left: 8rem;
-  font: var(--font-caption);
-  color: var(--color-black-50);
   text-align: right;
   background-color: var(--color-white);
 }
