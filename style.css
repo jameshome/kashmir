@@ -30,7 +30,7 @@ Text Domain: Kashmir
   --color-snow: rgba(239, 245, 247, 1);
   --color-lake: rgba(210, 227, 232, 1);
   --color-straw: rgba(182, 102, 17, 1);
-  --color-straw-light: rgba(182, 102, 17, 0.75);
+  --color-straw-light: rgba(182, 102, 17, 0.7);
   --shadow-media: 0 2px 20px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -145,7 +145,7 @@ body {
   color: var(--color-grey);
 }
 
-a {
+a:link {
   color: var(--color-straw);
   font-weight: 700;
   text-decoration: none;
