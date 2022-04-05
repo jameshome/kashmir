@@ -338,6 +338,7 @@ footer .nav-search-button {
 }
 
 header .nav-site a,
+header .nav-site a:visited,
 header .nav-site button {
   color: var(--color-blue);
 }
@@ -522,6 +523,7 @@ header .menu .nav-search-input {
   }
 
   .home header .nav-site a:hover,
+  .home header .nav-site a:visited:hover,
   .home header .nav-site button:hover {
     background-color: var(--color-white-30);
   }
@@ -541,7 +543,8 @@ footer {
   clear: both;
 }
 
-footer a {
+footer a,
+footer a:visited {
   color: var(--color-white);
 }
 
