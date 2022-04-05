@@ -737,6 +737,10 @@ article {
   line-height: 0;
 }
 
+.layout-gallery figure a {
+  border-radius: 4px;
+}
+
 .inline-component,
 .inline-actions {
   margin: 1rem 0;
