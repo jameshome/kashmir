@@ -25,6 +25,9 @@ get_header();
   <div class="layout layout-summary">
     <?php show_post('home/about'); ?>
   </div>
+  <div class="layout-gallery">
+    <?php show_post('home/about-gallery'); ?>
+  </div>
 </section>
 
 <section class="summary" id="futurism">
@@ -57,6 +60,9 @@ get_header();
 <section class="summary" id="archives">
   <div class="layout layout-summary">
     <?php show_post('home/archives'); ?>
+  </div>
+  <div class="layout-gallery">
+    <?php show_post('home/archives-gallery'); ?>
   </div>
 </section>
 
