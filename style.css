@@ -578,8 +578,8 @@ footer .chop img {
   color: var(--color-black-50);
 }
 
-.caption,
-.photo-wide figcaption {
+.photo-wide figcaption,
+.caption {
   padding: var(--reference-margin);
   padding-left: 8rem;
   text-align: right;
