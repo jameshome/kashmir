@@ -37,7 +37,6 @@ Text Domain: Kashmir
 :root {
   --reference-width: 800px;
   --reference-margin: 0.75rem;
-  --caption-margin: 0;
   --responsive-flex: column wrap;
   --responsive-only-wide: none;
   --responsive-only-narrow: block;
@@ -53,7 +52,6 @@ Text Domain: Kashmir
 @media (min-width: 760px) {
   :root {
     --reference-margin: 1rem;
-    --caption-margin: 8rem;
     --responsive-flex: row nowrap;
     --responsive-only-wide: block;
     --responsive-only-narrow: none;
@@ -601,7 +599,6 @@ footer nav.nav-site {
 .photo-wide figcaption,
 .caption {
   padding: var(--reference-margin);
-  padding-left: var(--caption-margin);
   text-align: right;
   background-color: var(--color-white);
 }
