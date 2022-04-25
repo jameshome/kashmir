@@ -575,6 +575,10 @@ footer .chop img {
   width: 100px;
 }
 
+footer nav.nav-site {
+  flex-flow: var(--responsive-flex);
+}
+
 .layout figcaption,
 .photo-wide figcaption,
 .caption {
