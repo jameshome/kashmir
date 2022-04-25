@@ -551,6 +551,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-blue);
+  padding-bottom: 1rem;
   clear: both;
 }
 
