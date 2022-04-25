@@ -37,6 +37,7 @@ Text Domain: Kashmir
 :root {
   --reference-width: 800px;
   --reference-margin: 0.75rem;
+  --caption-margin: 0;
   --responsive-flex: column wrap;
   --responsive-only-wide: none;
   --responsive-only-narrow: block;
@@ -52,6 +53,7 @@ Text Domain: Kashmir
 @media (min-width: 760px) {
   :root {
     --reference-margin: 1rem;
+    --caption-margin: 8rem;
     --responsive-flex: row nowrap;
     --responsive-only-wide: block;
     --responsive-only-narrow: none;
@@ -304,10 +306,6 @@ nav button:hover {
   opacity: 0;
 }
 
-footer .nav-search-button {
-  background-image: url(./img/icon-search-white.svg);
-}
-
 .nav-search input[type="text"] {
   font: var(--font-nav);
   border: 0;
@@ -336,6 +334,20 @@ footer .nav-search-button {
 
 .nav-search input[type="text"]:focus {
   outline: 0;
+}
+
+footer .nav-search-button {
+  background-image: url(./img/icon-search-white.svg);
+}
+
+@media (max-width: 759px) {
+  footer .nav-search-button {
+    width: 10rem;
+  }
+  footer .nav-search {
+    top: unset;
+    max-height: 2.5rem;
+  }
 }
 
 header .nav-site a,
@@ -372,7 +384,7 @@ header .canvas {
   background-position: top;
   background-repeat: no-repeat;
   color: var(--color-blue);
-  min-height: 48px;
+  min-height: 80px;
 }
 
 header .menu-button {
@@ -387,9 +399,9 @@ header .chop {
   top: 4px;
   left: 0.5rem;
   right: 0.5rem;
-  min-height: 44px;
+  min-height: 50px;
   background-image: url(./img/logo-kk-blue.svg);
-  background-size: 70px;
+  background-size: 85px;
   background-position: center top;
   background-repeat: no-repeat;
 }
@@ -453,10 +465,10 @@ header .menu .nav-search-input {
 
 .home header .tagline {
   display: block;
-  font: normal 900 0.7rem/1.2 "Work Sans", sans-serif;
+  font: normal 900 0.8rem/1.2 "Work Sans", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
   padding: var(--reference-margin) 0.5rem;
 }
 
@@ -589,7 +601,7 @@ footer nav.nav-site {
 .photo-wide figcaption,
 .caption {
   padding: var(--reference-margin);
-  padding-left: 8rem;
+  padding-left: var(--caption-margin);
   text-align: right;
   background-color: var(--color-white);
 }

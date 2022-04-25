@@ -27,11 +27,14 @@
     </button>
 
     <p class="tagline">
+      <nobr> Over the long term, the future </nobr> <nobr> is decided by optimists </nobr>
       <?php
-        $kashmir_description = get_bloginfo( 'description', 'display' );
-        if ( $kashmir_description || is_customize_preview() ) :
-          echo $kashmir_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-        endif; ?>
+       // uncomment to make tagline editable in settings
+       // $kashmir_description = get_bloginfo( 'description', 'display' );
+       // if ( $kashmir_description || is_customize_preview() ) :
+       //   echo $kashmir_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+       // endif; 
+       ?>
     </p>
 
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="chop">
