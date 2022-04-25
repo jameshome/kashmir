@@ -39,12 +39,12 @@ get_header();
   </div>
 </section>
 
-<section class="summary" id="recomendos">
+<section class="summary" id="cooltools">
   <div class="layout layout-summary">
-    <?php show_post('home/recomendos'); ?>
+    <?php show_post('home/cooltools'); ?>
   </div>
   <div class="layout-gallery">
-    <?php show_post('home/recomendos-gallery'); ?>
+    <?php show_post('home/cooltools-gallery'); ?>
   </div>
 </section>
 
