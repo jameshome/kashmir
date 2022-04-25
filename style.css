@@ -40,7 +40,7 @@ Text Domain: Kashmir
   --responsive-flex: column wrap;
   --responsive-only-wide: none;
   --responsive-only-narrow: block;
-  --responsive-illo-margin: 2rem 0 0 0;
+  --responsive-illo-margin: 1rem 0 0 0;
   --responsive-gallery-justify: center;
   --responsive-gallery-margin: 1rem 0.5rem -3rem;
   --responsive-gallery-width: 100px;
@@ -55,7 +55,7 @@ Text Domain: Kashmir
     --responsive-flex: row nowrap;
     --responsive-only-wide: block;
     --responsive-only-narrow: none;
-    --responsive-illo-margin: 4rem 0 0 0;
+    --responsive-illo-margin: 4rem 0 0 3rem;
     --responsive-gallery-justify: space-between;
     --responsive-gallery-margin: 0.5rem;
     --responsive-gallery-width: 120px;
@@ -703,7 +703,7 @@ article {
 
 .layout-summary-main {
   flex: 2;
-  margin: 0 3rem 0 0;
+  margin: 0;
 }
 
 .layout-summary-illo {
@@ -761,7 +761,7 @@ article {
 
 .actions .wp-block-group__inner-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: var(--responsive-flex);
   margin-bottom: 0.5rem;
 }
 
