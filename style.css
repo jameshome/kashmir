@@ -150,7 +150,8 @@ a {
   text-decoration: none;
 }
 
-a.link-action {
+a.link-action,
+a:visited.link-action {
   display: inline-block;
   background-color: var(--color-straw);
   font: var(--font-nav);
