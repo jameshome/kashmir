@@ -46,32 +46,6 @@ function kashmir_content_width() {
 }
 add_action( 'after_setup_theme', 'kashmir_content_width', 0 );
 
-/**
- * Add meta tags.
- */
-function kashmir_add_meta_tags() {
-  // homepage
-  if (is_home()) {
-    echo '<meta name="description" content="' . get_bloginfo( "description" ) . '" />' . "\n";
-    echo '<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />' . "\n";
-  }
-  // single post page
-  if ( is_singular() ) {
-  global $post;
-  $meta_description = strip_tags($post->post_content);
-  $meta_description = strip_shortcodes($post->post_content);
-  $meta_description = str_replace(array("\n", "\r", "\t"), ' ', $meta_description);
-  $meta_description = substr($meta_description, 0, 160);
-  echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
-  }
-  // category page
-  if ( is_category() ) {
-  $meta_description = strip_tags(category_description());
-  echo '<meta name="description" content="' . $meta_description . '" />' . "\n";
-  }
-  }
-  add_action( 'wp_head', 'kashmir_add_meta_tags');
-
 
 /**
  * Enqueue scripts and styles.
