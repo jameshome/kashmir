@@ -266,7 +266,7 @@ nav button:hover {
 }
 
 .menu .nav-search {
-  outline: 0;
+  border: 0;
 }
 
 .nav-search.visible {
@@ -419,7 +419,7 @@ header .nav-site {
 
 header .menu {
   position: absolute;
-  top: 48px;
+  top: 54px;
   left: 0;
   right: 0;
   display: flex;
