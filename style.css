@@ -312,6 +312,7 @@ nav button:hover {
   box-sizing: border-box;
   width: 80%;
   background-color: transparent;
+  outline: 0;
 }
 
 .nav-search input[type="image"] {
