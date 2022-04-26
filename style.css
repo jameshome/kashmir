@@ -259,7 +259,8 @@ nav button:hover {
   left: 0;
   right: 0;
   background-color: var(--color-lake);
-  outline: 2px solid var(--color-white);
+  outline: 0;
+  border: 2px solid var(--color-white);
   border-radius: 24px;
   z-index: 1;
 }
